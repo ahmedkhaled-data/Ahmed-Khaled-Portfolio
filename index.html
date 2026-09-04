@@ -1,235 +1,556 @@
-<title>Ahmed Khaled | Junior Data Analyst</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmed Khaled | Data Analyst</title>
 
-<meta name="description"
-      content="Ahmed Khaled - Junior Data Analyst skilled in Power BI, SQL, Excel, Python, Tableau, Power Query and DAX.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
 
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        scroll-behavior: smooth;
-    }
+        html {
+            scroll-behavior: smooth;
+        }
 
-    body {
-        font-family: Arial, Helvetica, sans-serif;
-        background: #f7f9fc;
-        color: #1f2937;
-        line-height: 1.6;
-    }
+        body {
+            background: #f5f7fa;
+            color: #1f2937;
+            line-height: 1.6;
+        }
 
-    a {
-        text-decoration: none;
-        color: inherit;
-    }
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #111827;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
 
-    .container {
-        width: 90%;
-        max-width: 1100px;
-        margin: auto;
-    }
+        nav .logo {
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+        }
 
-    /* NAVBAR */
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
 
-    nav {
-        background: #ffffff;
-        border-bottom: 1px solid #e5e7eb;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-    }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+            transition: 0.3s;
+        }
 
-    .nav-container {
-        height: 70px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
+        nav ul li a:hover {
+            color: #60a5fa;
+        }
 
-    .logo {
-        font-size: 22px;
-        font-weight: bold;
-        color: #111827;
-    }
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #111827, #1e3a8a);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 100px 20px 50px;
+        }
 
-    .logo span {
-        color: #2563eb;
-    }
+        .hero-content {
+            max-width: 800px;
+        }
 
-    nav ul {
-        display: flex;
-        list-style: none;
-        gap: 25px;
-    }
+        .hero h1 {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
 
-    nav ul li a {
-        font-size: 14px;
-        color: #4b5563;
-        transition: 0.3s;
-    }
+        .hero h2 {
+            font-size: 28px;
+            color: #93c5fd;
+            margin-bottom: 20px;
+        }
 
-    nav ul li a:hover {
-        color: #2563eb;
-    }
+        .hero p {
+            font-size: 18px;
+            color: #e5e7eb;
+            margin-bottom: 30px;
+        }
 
-    /* HERO */
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            margin: 5px;
+            transition: 0.3s;
+        }
 
-    .hero {
-        min-height: 520px;
-        display: flex;
-        align-items: center;
-        background: #ffffff;
-    }
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
 
-    .hero-content {
-        max-width: 750px;
-    }
+        section {
+            padding: 80px 8%;
+        }
 
-    .hero h1 {
-        font-size: 52px;
-        color: #111827;
-        margin-bottom: 10px;
-    }
+        .section-title {
+            text-align: center;
+            font-size: 35px;
+            margin-bottom: 45px;
+            color: #111827;
+        }
 
-    .hero h1 span {
-        color: #2563eb;
-    }
+        .about {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+            font-size: 18px;
+            color: #4b5563;
+        }
 
-    .hero h2 {
-        font-size: 25px;
-        color: #4b5563;
-        margin-bottom: 20px;
-        font-weight: normal;
-    }
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
 
-    .hero p {
-        font-size: 17px;
-        color: #6b7280;
-        max-width: 700px;
-        margin-bottom: 30px;
-    }
+        .skill {
+            background: white;
+            padding: 25px;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            font-weight: bold;
+            transition: 0.3s;
+        }
 
-    .buttons {
-        display: flex;
-        gap: 15px;
-        flex-wrap: wrap;
-    }
+        .skill:hover {
+            transform: translateY(-5px);
+        }
 
-    .btn {
-        padding: 12px 22px;
-        border-radius: 7px;
-        font-weight: bold;
-        font-size: 14px;
-        transition: 0.3s;
-    }
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
 
-    .btn-primary {
-        background: #2563eb;
-        color: white;
-    }
+        .project {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
 
-    .btn-primary:hover {
-        background: #1d4ed8;
-    }
+        .project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
 
-    .btn-secondary {
-        border: 1px solid #d1d5db;
-        color: #374151;
-        background: white;
-    }
+        .project h3 {
+            font-size: 23px;
+            margin-bottom: 15px;
+            color: #1e3a8a;
+        }
 
-    .btn-secondary:hover {
-        border-color: #2563eb;
-        color: #2563eb;
-    }
+        .project p {
+            color: #4b5563;
+            margin-bottom: 20px;
+        }
 
-    /* SECTIONS */
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
 
-    section {
-        padding: 75px 0;
-    }
+        .tag {
+            background: #dbeafe;
+            color: #1e40af;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 13px;
+        }
 
-    .section-title {
-        text-align: center;
-        margin-bottom: 45px;
-    }
+        .project-link {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-    .section-title h2 {
-        font-size: 32px;
-        color: #111827;
-        margin-bottom: 8px;
-    }
+        .certifications {
+            max-width: 900px;
+            margin: auto;
+        }
 
-    .section-title p {
-        color: #6b7280;
-    }
+        .certificate {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
 
-    /* ABOUT */
+        .certificate h3 {
+            color: #1e3a8a;
+            margin-bottom: 8px;
+        }
 
-    .about {
-        background: #f7f9fc;
-    }
+        .certificate p {
+            color: #4b5563;
+        }
 
-    .about-text {
-        max-width: 850px;
-        margin: auto;
-        text-align: center;
-        color: #4b5563;
-        font-size: 16px;
-    }
+        .education {
+            text-align: center;
+            max-width: 800px;
+            margin: auto;
+        }
 
-    /* SKILLS */
+        .education h3 {
+            font-size: 25px;
+            color: #1e3a8a;
+            margin-bottom: 10px;
+        }
 
-    .skills-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-    }
+        .contact {
+            background: #111827;
+            color: white;
+            text-align: center;
+        }
 
-    .skill-card {
-        background: white;
-        border: 1px solid #e5e7eb;
-        border-radius: 10px;
-        padding: 25px;
-        transition: 0.3s;
-    }
+        .contact .section-title {
+            color: white;
+        }
 
-    .skill-card:hover {
-        transform: translateY(-5px);
-        border-color: #bfdbfe;
-    }
+        .contact p {
+            margin: 10px 0;
+            font-size: 17px;
+        }
 
-    .skill-card h3 {
-        margin-bottom: 10px;
-        color: #111827;
-        font-size: 18px;
-    }
+        .contact a {
+            color: #93c5fd;
+            text-decoration: none;
+        }
 
-    .skill-card p {
-        color: #6b7280;
-        font-size: 14px;
-    }
+        footer {
+            background: #030712;
+            color: #9ca3af;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
 
-    /* PROJECTS */
+        @media (max-width: 768px) {
+            nav {
+                padding: 15px 5%;
+            }
 
-    .projects {
-        background: #f7f9fc;
-    }
+            nav ul {
+                gap: 12px;
+            }
 
-    .projects-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 25px;
-    }
+            nav ul li a {
+                font-size: 12px;
+            }
 
-    .project-card {
-        background: white;
-        border: 1px solid #e5e7eb;
-        border-radius: 12px;
-        overflow: hidden;
-        transition: 0.3s;
-    }
+            .hero h1 {
+                font-size: 40px;
+            }
 
-    .project-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 25px rgba(0,0,0,0.
+            .hero h2 {
+                font-size: 22px;
+            }
+
+            section {
+                padding: 60px 5%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">Ahmed Khaled</div>
+
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certifications">Certificates</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Ahmed Khaled</h1>
+
+            <h2>Junior Data Analyst</h2>
+
+            <p>
+                Aspiring Data Analyst with experience in Power BI, SQL, Excel,
+                Python, Tableau, Power Query and DAX.
+                Passionate about transforming data into meaningful insights
+                and interactive dashboards.
+            </p>
+
+            <a href="#projects" class="btn">View My Projects</a>
+
+            <a href="https://www.linkedin.com/in/ahmed-khaled-412128384"
+               target="_blank"
+               class="btn">
+                LinkedIn
+            </a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+
+        <div class="about">
+            <p>
+                I am Ahmed Khaled, a Business student at the University of Alexandria,
+                English Section, with a strong interest in Data Analytics and
+                Business Intelligence.
+            </p>
+
+            <br>
+
+            <p>
+                I work with data using SQL, Power BI, Excel, Python and Tableau.
+                I enjoy cleaning, analyzing and visualizing data to help businesses
+                understand their performance and make better decisions.
+            </p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2 class="section-title">Technical Skills</h2>
+
+        <div class="skills">
+
+            <div class="skill">Power BI</div>
+
+            <div class="skill">SQL</div>
+
+            <div class="skill">Excel</div>
+
+            <div class="skill">Python</div>
+
+            <div class="skill">Tableau</div>
+
+            <div class="skill">Power Query</div>
+
+            <div class="skill">DAX</div>
+
+            <div class="skill">Data Analysis</div>
+
+        </div>
+    </section>
+
+    <section id="projects">
+
+        <h2 class="section-title">Projects</h2>
+
+        <div class="projects">
+
+            <!-- Amazon Project -->
+
+            <div class="project">
+
+                <h3>Amazon Sales Performance Analysis</h3>
+
+                <div class="tags">
+
+                    <span class="tag">Power BI</span>
+
+                    <span class="tag">SQL</span>
+
+                    <span class="tag">Power Query</span>
+
+                    <span class="tag">DAX</span>
+
+                    <span class="tag">Data Analysis</span>
+
+                </div>
+
+                <p>
+                    An interactive Power BI dashboard designed to analyze
+                    Amazon sales performance, revenue, profit, customers,
+                    units sold and business trends.
+                </p>
+
+                <p>
+                    The project includes data cleaning and transformation,
+                    KPI development, DAX calculations and interactive
+                    dashboard navigation.
+                </p>
+
+                <a href="#"
+                   class="project-link">
+                    View Project →
+                </a>
+
+            </div>
+
+
+            <!-- HR Project -->
+
+            <div class="project">
+
+                <h3>HR Attrition Analysis</h3>
+
+                <div class="tags">
+
+                    <span class="tag">Power BI</span>
+
+                    <span class="tag">Power Query</span>
+
+                    <span class="tag">DAX</span>
+
+                    <span class="tag">Data Analysis</span>
+
+                </div>
+
+                <p>
+                    An HR analytics dashboard designed to analyze employee
+                    attrition and identify important patterns across
+                    departments, job roles and employee demographics.
+                </p>
+
+                <p>
+                    The dashboard provides interactive KPIs and visualizations
+                    to help understand employee turnover and workforce trends.
+                </p>
+
+                <a href="#"
+                   class="project-link">
+                    View Project →
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section id="certifications">
+
+        <h2 class="section-title">Certifications</h2>
+
+        <div class="certifications">
+
+            <div class="certificate">
+
+                <h3>Professional Data Analysis Course</h3>
+
+                <p>
+                    Machinfy — 70 Hours
+                </p>
+
+                <p>
+                    Grade: Very Good
+                </p>
+
+            </div>
+
+
+            <div class="certificate">
+
+                <h3>Data Science and AI Diploma</h3>
+
+                <p>
+                    EYouth Learning — 40 Hours
+                </p>
+
+                <p>
+                    Accredited by IAO
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section id="education">
+
+        <h2 class="section-title">Education</h2>
+
+        <div class="education">
+
+            <h3>Faculty of Business – University of Alexandria</h3>
+
+            <p>
+                English Section
+            </p>
+
+            <p>
+                Business Administration / Data Analytics Interest
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section id="contact" class="contact">
+
+        <h2 class="section-title">Contact Me</h2>
+
+        <p>
+            Email:
+            <a href="mailto:ahmedkhaleddta@gmail.com">
+                ahmedkhaleddta@gmail.com
+            </a>
+        </p>
+
+        <p>
+            Phone:
+            01229654339
+        </p>
+
+        <p>
+            LinkedIn:
+            <a href="https://www.linkedin.com/in/ahmed-khaled-412128384"
+               target="_blank">
+                Ahmed Khaled
+            </a>
+        </p>
+
+    </section>
+
+
+    <footer>
+
+        <p>
+            © 2026 Ahmed Khaled. All Rights Reserved.
+        </p>
+
+    </footer>
+
+</body>
+</html>
